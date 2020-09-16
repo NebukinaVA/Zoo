@@ -1,12 +1,4 @@
-﻿// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
-
-#ifndef PCH_H
+﻿#ifndef PCH_H
 #define PCH_H
 #include <string>
 #include <iostream>
@@ -43,12 +35,18 @@ public:
 	Mammal(std::string n) : Animal(n)
 	{
 	}
+	~Mammal()
+	{
+	}
 };
 
 class Bird : protected Animal // клкасс птицы
 {
 public:
 	Bird(std::string n) : Animal(n)
+	{
+	}
+	~Bird()
 	{
 	}
 };
@@ -64,6 +62,9 @@ public:
 	{
 		std::cout << sound << std::endl;
 	}
+	~Cat()
+	{
+	}
 };
 
 class Dog : protected Mammal // класс собаки
@@ -76,6 +77,9 @@ public:
 	void Say()
 	{
 		std::cout << sound << std::endl;
+	}
+	~Dog()
+	{
 	}
 };
 
@@ -90,6 +94,9 @@ public:
 	{
 		std::cout << sound << std::endl;
 	}
+	~Fox()
+	{
+	}
 };
 
 class Sparrow : protected Bird // класс воробей
@@ -103,6 +110,9 @@ public:
 	{
 		std::cout << sound << std::endl;
 	}
+	~Sparrow()
+	{
+	}
 };
 
 class Cockerel : protected Bird // класс петух
@@ -115,6 +125,9 @@ public:
 	void Say()
 	{
 		std::cout << sound << std::endl;
+	}
+	~Cockerel()
+	{
 	}
 };
 
@@ -139,13 +152,13 @@ public:
 		{
 			if (animals[i]->ReturnId() == ident)
 			{
-				temp.erase(animals.begin() + i); // нельзя исп. eras swap, resize
+				temp.erase(animals.begin() + i);
 				animals.resize(animals.size() - 1);
 				animals.swap(temp);
 			}
 		}
 	}
-	void Listen() // для фиксированного количества животных
+	void Listen() 
 	{
 		for (int i = 0; i < 5;i++)
 			animals[i]->Say();
@@ -160,8 +173,8 @@ int main()
 	Cat cat("Sprinkles");
 	cat.Say();
 	Zoo zoo;
-	//Animal* pet;
-	//zoo.Append(pet);
+	Animal* pet;
+	zoo.Append(pet);
 	//zoo.Listen();
 	zoo.Remove(1);
 }
