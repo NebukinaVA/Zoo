@@ -29,7 +29,7 @@ public:
 
 int Animal::id_ = 0;
 
-class Mammal : protected Animal // класс млекопитающие
+class Mammal : public Animal // класс млекопитающие
 {
 public:
 	Mammal(std::string n) : Animal(n)
@@ -40,7 +40,7 @@ public:
 	}
 };
 
-class Bird : protected Animal // клкасс птицы
+class Bird : public Animal // клкасс птицы
 {
 public:
 	Bird(std::string n) : Animal(n)
@@ -51,7 +51,7 @@ public:
 	}
 };
 
-class Cat : protected Mammal // класс коты
+class Cat : public Mammal // класс коты
 {
 	std::string sound = { "Meow!" };
 public:
@@ -67,7 +67,7 @@ public:
 	}
 };
 
-class Dog : protected Mammal // класс собаки
+class Dog : public Mammal // класс собаки
 {
 	std::string sound = { "Woof!" };
 public:
@@ -83,7 +83,7 @@ public:
 	}
 };
 
-class Fox : protected Mammal // класс лиса
+class Fox : public Mammal // класс лиса
 {
 	std::string sound = { "?????" };
 public:
@@ -99,7 +99,7 @@ public:
 	}
 };
 
-class Sparrow : protected Bird // класс воробей
+class Sparrow : public Bird // класс воробей
 {
 	std::string sound = { "Tweet-tweet" };
 public:
@@ -115,7 +115,7 @@ public:
 	}
 };
 
-class Cockerel : protected Bird // класс петух
+class Cockerel : public Bird // класс петух
 {
 	std::string sound = { "Cock-A-Doodle-Do!" };
 public:
@@ -137,8 +137,8 @@ class Zoo // класс зоопарк
 public:
 	Zoo()
 	{
-		Animal* a;
-		animals.push_back(a);
+		Fox fox;
+		animals.push_back(&fox);
 	}
 	void Append(Animal* a)
 	{
@@ -160,7 +160,7 @@ public:
 	}
 	void Listen() 
 	{
-		for (int i = 0; i < 5;i++)
+		for (int i = 0; i < animals.size();i++)
 			animals[i]->Say();
 	}
 	~Zoo()
@@ -173,9 +173,10 @@ int main()
 	Cat cat("Sprinkles");
 	cat.Say();
 	Zoo zoo;
-	Animal* pet;
-	zoo.Append(pet);
-	//zoo.Listen();
+	zoo.Append(&cat);
+	zoo.Listen();
+	zoo.Remove(2);
 	zoo.Remove(1);
+	zoo.Remove(0);
 }
 #endif //PCH_H

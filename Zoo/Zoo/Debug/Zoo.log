@@ -1,3 +1,5 @@
 ﻿  pch.cpp
 c:\users\sadpo\documents\аисд\zoo\zoo\zoo\pch.h(151): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\sadpo\documents\аисд\zoo\zoo\zoo\pch.h(177): error C4700: использована неинициализированная локальная переменная "pet"
+c:\users\sadpo\documents\аисд\zoo\zoo\zoo\pch.h(163): warning C4018: <: несоответствие типов со знаком и без знака
+  Zoo.cpp
+  Zoo.vcxproj -> C:\Users\sadpo\Documents\АиСД\Zoo\Zoo\Debug\Zoo.exe
