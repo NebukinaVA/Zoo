@@ -1,0 +1,7 @@
+﻿  pch.cpp
+c:\users\sadpo\documents\аисд\zoo\zoo\zoo\pch.h(138): warning C4018: <: несоответствие типов со знаком и без знака
+  Zoo.cpp
+  Создание кода
+  All 194 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  Zoo.vcxproj -> C:\Users\sadpo\Documents\АиСД\Zoo\Zoo\Release\Zoo.exe

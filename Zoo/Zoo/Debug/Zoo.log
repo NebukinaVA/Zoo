@@ -1,0 +1,4 @@
+﻿  pch.cpp
+c:\users\sadpo\documents\аисд\zoo\zoo\zoo\pch.h(138): warning C4018: <: несоответствие типов со знаком и без знака
+  Zoo.cpp
+  Zoo.vcxproj -> C:\Users\sadpo\Documents\АиСД\Zoo\Zoo\Debug\Zoo.exe
