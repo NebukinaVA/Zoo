@@ -19,21 +19,21 @@ public:
 	}
 	virtual void Say() = 0;
 	int ReturnId();
-	~Animal() {}
+	~Animal() { std::cout << "An animal died :(((" << std::endl; }
 };
 
 class Mammal : public Animal // класс млекопитающие
 {
 public:
 	Mammal(std::string n) : Animal(n) {}
-	~Mammal() {}
+	~Mammal() { std::cout << "A mammal died :(((" << std::endl; }
 };
 
 class Bird : public Animal // клкасс птицы
 {
 public:
 	Bird(std::string n) : Animal(n) {}
-	~Bird() {}
+	~Bird() { std::cout << "A bird died :(((" << std::endl; }
 };
 
 class Cat : public Mammal // класс коты
@@ -42,7 +42,7 @@ class Cat : public Mammal // класс коты
 public:
 	Cat(std::string n = { "Who am I?" }) : Mammal(n) {}
 	void Say();
-	~Cat() {}
+	~Cat() { std::cout << "A cat died :(((" << std::endl; }
 };
 
 class Dog : public Mammal // класс собаки
@@ -51,7 +51,7 @@ class Dog : public Mammal // класс собаки
 public:
 	Dog(std::string n = { "Who am I?" }) : Mammal(n) {}
 	void Say();
-	~Dog() {}
+	~Dog() { std::cout << "A dog died :(((" << std::endl; }
 };
 
 class Fox : public Mammal // класс лиса
@@ -60,7 +60,7 @@ class Fox : public Mammal // класс лиса
 public:
 	Fox(std::string n = { "Who am I?" }) : Mammal(n) {}
 	void Say();
-	~Fox() {}
+	~Fox() { std::cout << "A fox died :(((" << std::endl; }
 };
 
 class Sparrow : public Bird // класс воробей
@@ -69,7 +69,7 @@ class Sparrow : public Bird // класс воробей
 public:
 	Sparrow(std::string n = { "Who am I?" }) : Bird(n) {}
 	void Say();
-	~Sparrow() {}
+	~Sparrow() { std::cout << "A sparrow died :(((" << std::endl; }
 };
 
 class Cockerel : public Bird // класс петух
@@ -78,7 +78,7 @@ class Cockerel : public Bird // класс петух
 public:
 	Cockerel(std::string n = { "Who am I?" }) : Bird(n) {}
 	void Say();
-	~Cockerel() {}
+	~Cockerel() { std::cout << "A cockerel died :(((" << std::endl; }
 };
 
 class Zoo // класс зоопарк
@@ -89,6 +89,7 @@ public:
 	void Append(Animal* a);
 	void Remove(int ident); //id
 	void Listen();
+	int BirdCounter(); //
 	~Zoo() {}
 };
 

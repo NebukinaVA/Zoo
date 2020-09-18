@@ -63,3 +63,14 @@ void Zoo::Listen()
 	for (int i = 0; i < animals.size();i++)
 		animals[i]->Say();
 }
+
+int Zoo::BirdCounter()
+{
+	int count = 0;
+	for (int i = 0;i < animals.size();i++)
+	{
+		if (dynamic_cast<Bird*>(animals[i]))
+			count++;
+	}
+	return count;
+}
