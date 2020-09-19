@@ -19,7 +19,7 @@ public:
 	}
 	virtual void Say() = 0;
 	int ReturnId();
-	~Animal() { std::cout << "An animal died :(((" << std::endl; }
+	virtual ~Animal() { std::cout << "An animal died :(((" << std::endl; }
 };
 
 class Mammal : public Animal // класс млекопитающие

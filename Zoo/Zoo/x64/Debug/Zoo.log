@@ -1,4 +1,1 @@
-﻿  pch.cpp
-  Zoo.cpp
-  LINK : эх эрщфхэ шыш эх т√яюыэхэр ёсюЁър C:\Users\sadpo\Documents\└ш╤─\Zoo\Zoo\x64\Debug\Zoo.exe яЁш яюёыхфэхщ шэъЁхьхэЄэющ ъюьяюэютъх; т√яюыэ хЄё  яюыэр  ъюьяюэютър
-  Zoo.vcxproj -> C:\Users\sadpo\Documents\АиСД\Zoo\Zoo\x64\Debug\Zoo.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(314,5): error MSB6003: Не удалось запустить указанный исполняемый файл задачи "CL.exe". Процесс не может получить доступ к файлу "C:\USERS\SADPO\DOCUMENTS\АИСД\ZOO\ZOO\ZOO\X64\DEBUG\PCH.OBJ", так как этот файл используется другим процессом.
